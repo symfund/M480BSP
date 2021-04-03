@@ -101,3 +101,6 @@ Samplecode/*/packages/
 !ThirdParty/lwip-2.0.0/doc/sys_arch.txt
 !ThirdParty/lwip-2.0.0/src/apps/httpd/makefsdata/readme.txt
 
+.vs/NuDemo/v16/.suo
+*.db
+*.user

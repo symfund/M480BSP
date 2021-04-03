@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SampleCode">
+      <UniqueIdentifier>{3216f3b2-22fc-4677-835a-920b6964f2b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleCode\NuMaker-PFM-M487D">
+      <UniqueIdentifier>{d65f36d7-506d-48e4-b56e-652689016147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo">
+      <UniqueIdentifier>{93858f46-de01-441b-9c57-9ff35b263152}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib">
+      <UniqueIdentifier>{1d3596da-83de-495b-b2fe-5e087dc5c331}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{cf7751ca-1c53-462d-b1bc-6de683eb876c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\emWin">
+      <UniqueIdentifier>{dc39d0c5-f57f-45a0-ae74-db22c9e6c8ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\emWin\Config">
+      <UniqueIdentifier>{ac4e26e8-e444-4c5c-bbaf-3e4b7a6f6359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{a17d1bb4-f65c-4203-baca-867bf1223535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\StdDriver">
+      <UniqueIdentifier>{7bd0e347-e3b1-4f6c-b2d0-3e1499fffd70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\StdDriver\src">
+      <UniqueIdentifier>{15607266-fda6-4d9a-be1b-eeb5b50401db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\FatFs">
+      <UniqueIdentifier>{e03c89d2-109e-42c3-90cc-0f6b5b1b5da5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Device">
+      <UniqueIdentifier>{d819ae07-6026-4d45-85ba-2a6ca659c3d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Device\Nuvoton">
+      <UniqueIdentifier>{da376f50-0660-4621-b967-ae46929a7b98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Device\Nuvoton\M480">
+      <UniqueIdentifier>{b9f07dda-433a-4d39-9557-6ae6d30c1cf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Device\Nuvoton\M480\Source">
+      <UniqueIdentifier>{9f367e08-cdb7-4bc4-b91e-da9166795da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Device\Nuvoton\M480\Source\GCC">
+      <UniqueIdentifier>{42eebeaa-2789-4034-89ba-9ebfbdf3dbee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application">
+      <UniqueIdentifier>{50a37571-e61f-4c75-8073-931ec14903e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\FatFs\source">
+      <UniqueIdentifier>{b8c0ee88-f1d5-44e7-abda-c7cdaef056d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\emWin\Lib">
+      <UniqueIdentifier>{2418b613-25b1-4b8c-b69c-2ce5a4b96455}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\M48XTouchPanel.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\SDGlue.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\diskio.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\fbutils.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\testutils.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\ts_calibrate.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\GUIConf.c">
+      <Filter>ThirdParty\emWin\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\GUI_X.c">
+      <Filter>ThirdParty\emWin\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\LCDConf.c">
+      <Filter>ThirdParty\emWin\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\main.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\clk.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\eadc.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\ebi.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\fmc.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\gpio.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\retarget.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\sdh.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\sys.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\timer.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\uart.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\Device\Nuvoton\M480\Source\GCC\_syscalls.c">
+      <Filter>Library\Device\Nuvoton\M480\Source\GCC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\Device\Nuvoton\M480\Source\system_M480.c">
+      <Filter>Library\Device\Nuvoton\M480\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_AntialiasedText.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Automotive.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_BarGraph.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Bitmap.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_ColorBar.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Conf.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Cursor.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Fading.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Graph.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_IconView.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_ImageFlow.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Intro.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Listview.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_RadialMenu.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Resource.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Skinning.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Speed.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Speedometer.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Start.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_TransparentDialog.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Treeview.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_VScreen.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_WashingMachine.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_ZoomAndRotate.c">
+      <Filter>SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\FatFs\source\ff.c">
+      <Filter>ThirdParty\FatFs\source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile.mak" />
+    <None Include="BuildCmd.bat" />
+    <None Include="..\Library\Device\Nuvoton\M480\Source\GCC\startup_M480.S">
+      <Filter>Library\Device\Nuvoton\M480\Source\GCC</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\ThirdParty\emWin\Lib\libNUemWin_CM4_GNU.a">
+      <Filter>ThirdParty\emWin\Lib</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

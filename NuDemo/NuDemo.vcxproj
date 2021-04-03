@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{D1319589-4462-4F03-A008-37A5A3451602}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeOutput>NuDemo.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeOutput>NuDemo.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <NMakeOutput>
+    </NMakeOutput>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>
+    </NMakeIncludeSearchPath>
+    <NMakeBuildCommandLine>BuildCmd.bat all $(SolutionDir)$(Platform)\$(Configuration)\</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>BuildCmd.bat rebuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>BuildCmd.bat clean $(SolutionDir)$(Platform)\$(Configuration)\</NMakeCleanCommandLine>
+    <IncludePath>C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include;..\Library\Device\Nuvoton\M480\Include;..\ThirdParty\emWin\Include</IncludePath>
+    <ReferencePath>
+    </ReferencePath>
+    <ExecutablePath>
+    </ExecutablePath>
+    <LibraryPath>
+    </LibraryPath>
+    <LibraryWPath>
+    </LibraryWPath>
+    <SourcePath>
+    </SourcePath>
+    <ExcludePath>
+    </ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeOutput>NuDemo.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeOutput>NuDemo.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <NMakeOutput>NuDemo.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>ARM;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Library\Device\Nuvoton\M480\Source\GCC\_syscalls.c" />
+    <ClCompile Include="..\Library\Device\Nuvoton\M480\Source\system_M480.c" />
+    <ClCompile Include="..\Library\StdDriver\src\clk.c" />
+    <ClCompile Include="..\Library\StdDriver\src\eadc.c" />
+    <ClCompile Include="..\Library\StdDriver\src\ebi.c" />
+    <ClCompile Include="..\Library\StdDriver\src\fmc.c" />
+    <ClCompile Include="..\Library\StdDriver\src\gpio.c" />
+    <ClCompile Include="..\Library\StdDriver\src\retarget.c" />
+    <ClCompile Include="..\Library\StdDriver\src\sdh.c" />
+    <ClCompile Include="..\Library\StdDriver\src\sys.c" />
+    <ClCompile Include="..\Library\StdDriver\src\timer.c" />
+    <ClCompile Include="..\Library\StdDriver\src\uart.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_AntialiasedText.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Automotive.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_BarGraph.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Bitmap.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_ColorBar.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Conf.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Cursor.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Fading.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Graph.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_IconView.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_ImageFlow.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Intro.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Listview.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_RadialMenu.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Resource.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Skinning.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Speed.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Speedometer.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Start.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_TransparentDialog.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_Treeview.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_VScreen.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_WashingMachine.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_ZoomAndRotate.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\main.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\diskio.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\fbutils.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\M48XTouchPanel.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\SDGlue.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\testutils.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\ts_calibrate.c" />
+    <ClCompile Include="..\ThirdParty\emWin\Config\GUIConf.c" />
+    <ClCompile Include="..\ThirdParty\emWin\Config\GUI_X.c" />
+    <ClCompile Include="..\ThirdParty\emWin\Config\LCDConf.c" />
+    <ClCompile Include="..\ThirdParty\FatFs\source\ff.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Library\Device\Nuvoton\M480\Source\GCC\startup_M480.S" />
+    <None Include="BuildCmd.bat" />
+    <None Include="Makefile.mak" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\ThirdParty\emWin\Lib\libNUemWin_CM4_GNU.a" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
