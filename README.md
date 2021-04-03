@@ -8,6 +8,8 @@ http://www.nuvoton.com.cn/resource-download.jsp?tp_GUID=SW1120200401182901
 
 If the above link is broken, go to https://www.nuvoton.com.cn/tool-and-software/ide-and-compiler/
 
-Modify M480BSP/NuDemo/BuildCmd.bat, make sure that MAKE_PATH and GNU_TOOLS_ARM_EMBEDDED_PATH point to the correct path.
+Modify M480BSP/NuDemo/BuildCmd.bat, and make sure that both MAKE_PATH and GNU_TOOLS_ARM_EMBEDDED_PATH point to the right path.
+
 SET MAKE_PATH=path/to/make.exe
+
 SET GNU_TOOLS_ARM_EMBEDDED_PATH=path/to/arm-none-gcc.exe
