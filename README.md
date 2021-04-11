@@ -1,7 +1,5 @@
-# M480BSP
-BSP for M480 Series MCU
-
-Developing M480 with Visual Studio 2019 and GNU Tools ARM Embedded on Windows 10
+# Developing M480 with Visual Studio Community 2019 and GNU Tools ARM Embedded on Windows 10
+M487D DSP Simulator Demo
 
 # Install Toolchain
 The GNU Tools ARM Embedded is encapsulated in NuEclipse, it is required to download the NuEclipse_V1.01.017_Windows from the below link:
