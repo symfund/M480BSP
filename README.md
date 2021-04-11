@@ -13,3 +13,14 @@ Modify M480BSP/NuDemo/BuildCmd.bat, and make sure that both MAKE_PATH and GNU_TO
 SET MAKE_PATH=path/to/make.exe
 
 SET GNU_TOOLS_ARM_EMBEDDED_PATH=path/to/arm-none-gcc.exe
+
+
+
+
+Use Nuvoton Simulator
+
+Open "NuDemo.sln" with Microsoft Visual Studio Community 2019. In sidebar of "Solution Explorer', set NuSimDemo as startup project, select "Debug" configuration and x86 platform, then click the button "Local Windows Debugger"
+
+
+
+
