@@ -21,7 +21,7 @@ SET GNU_TOOLS_ARM_EMBEDDED_PATH=path/to/arm-none-gcc.exe
 
 
 
-Open "NuDemo.sln" with Microsoft Visual Studio Community 2019. Choose the configuration **Debug** and **x86** , then click the button **Local Windows Debugger** to lanuch simulator.
+Open **NuDemo.sln** with **Microsoft Visual Studio Community 2019**, choose the configuration **Debug** and **x86** , then click the button **Local Windows Debugger** to lanuch simulator.
 
 
 
