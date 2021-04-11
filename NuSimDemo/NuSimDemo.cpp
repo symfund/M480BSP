@@ -6,13 +6,9 @@
 #include "framework.h"
 #include "NuSimDemo.h"
 
-//#include "NuSimAPI.h"
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-
-//#pragma comment(lib, "NuSIM.lib")
 
 // CNuSimDemoApp
 

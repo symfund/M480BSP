@@ -39,7 +39,7 @@
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
@@ -149,11 +149,12 @@
       <IgnoreSpecificDefaultLibraries>LIBC.lib;</IgnoreSpecificDefaultLibraries>
       <SubSystem>Windows</SubSystem>
       <ModuleDefinitionFile>.\NuDemo.def</ModuleDefinitionFile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\Library\Device\Nuvoton\M480\Include;..\Library\CMSIS\Include;..\Library\StdDriver\inc;..\ThirdParty\emWin\Include;..\ThirdParty\emWin\Config;..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib;..\ThirdParty\FatFs\source</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
@@ -162,6 +163,11 @@
     </Lib>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>NUGUICore.lib;NUGUISim.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\NuDemo.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\ThirdParty\emWin\Lib</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
