@@ -11,6 +11,7 @@ If the above link is broken, go to https://www.nuvoton.com.cn/tool-and-software/
 Modify M480BSP/NuDemo/BuildCmd.bat, and make sure that both MAKE_PATH and GNU_TOOLS_ARM_EMBEDDED_PATH point to the right path.
 
 SET MAKE_PATH=path/to/make.exe
+
 SET GNU_TOOLS_ARM_EMBEDDED_PATH=path/to/arm-none-gcc.exe
 
 # Using Nuvoton Simulator
