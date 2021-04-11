@@ -103,7 +103,6 @@ Samplecode/*/packages/
 
 .vs/NuDemo/v16/.suo
 *.db
-*.user
 *.db-shm
 *.db-wal
 *.opendb
