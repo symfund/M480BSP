@@ -30,15 +30,16 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{D1319589-4462-4F03-A008-37A5A3451602}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Makefile</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
@@ -130,7 +131,38 @@
     <NMakeOutput>NuDemo.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>ARM;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
-  <ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Library\Device\Nuvoton\M480\Include;..\Library\CMSIS\Include;..\Library\StdDriver\inc;..\ThirdParty\emWin\Include;..\ThirdParty\emWin\Config;..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib;..\ThirdParty\FatFs\source</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4819 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>NUGUICore.lib;NUGUISim.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\ThirdParty\emWin\Lib</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\NuDemo.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Library\Device\Nuvoton\M480\Include;..\Library\CMSIS\Include;..\Library\StdDriver\inc;..\ThirdParty\emWin\Include;..\ThirdParty\emWin\Config;..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib;..\ThirdParty\FatFs\source</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Library\Device\Nuvoton\M480\Source\GCC\_syscalls.c" />
@@ -140,8 +172,14 @@
     <ClCompile Include="..\Library\StdDriver\src\ebi.c" />
     <ClCompile Include="..\Library\StdDriver\src\fmc.c" />
     <ClCompile Include="..\Library\StdDriver\src\gpio.c" />
-    <ClCompile Include="..\Library\StdDriver\src\retarget.c" />
-    <ClCompile Include="..\Library\StdDriver\src\sdh.c" />
+    <ClCompile Include="..\Library\StdDriver\src\retarget.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\sdh.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\Library\StdDriver\src\sys.c" />
     <ClCompile Include="..\Library\StdDriver\src\timer.c" />
     <ClCompile Include="..\Library\StdDriver\src\uart.c" />
@@ -171,24 +209,55 @@
     <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_WashingMachine.c" />
     <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\Application\GUIDEMO_ZoomAndRotate.c" />
     <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\main.c" />
-    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\diskio.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\diskio.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\fbutils.c" />
     <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\M48XTouchPanel.c" />
-    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\SDGlue.c" />
+    <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\SDGlue.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\testutils.c" />
     <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\ts_calibrate.c" />
-    <ClCompile Include="..\ThirdParty\emWin\Config\GUIConf.c" />
-    <ClCompile Include="..\ThirdParty\emWin\Config\GUI_X.c" />
-    <ClCompile Include="..\ThirdParty\emWin\Config\LCDConf.c" />
-    <ClCompile Include="..\ThirdParty\FatFs\source\ff.c" />
+    <ClCompile Include="..\ThirdParty\emWin\Config\GUIConf.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\GUI_X.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\LCDConf.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\Win32\GUIConf.c" />
+    <ClCompile Include="..\ThirdParty\emWin\Config\Win32\LCDConf.c" />
+    <ClCompile Include="..\ThirdParty\emWin\Config\Win32\SIMConf.c" />
+    <ClCompile Include="..\ThirdParty\FatFs\source\ff.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="AppMain.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Library\Device\Nuvoton\M480\Source\GCC\startup_M480.S" />
     <None Include="BuildCmd.bat" />
     <None Include="Makefile.mak" />
+    <None Include="NuDemo.def" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\ThirdParty\emWin\Lib\libNUemWin_CM4_GNU.a" />
+    <Library Include="..\ThirdParty\emWin\Lib\libNUemWin_CM4_GNU.a">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ThirdParty\emWin\Config\Win32\GUIConf.h" />
+    <ClInclude Include="..\ThirdParty\emWin\Config\Win32\LCDConf.h" />
+    <ClInclude Include="NuDemo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

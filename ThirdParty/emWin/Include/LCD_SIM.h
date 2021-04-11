@@ -46,6 +46,10 @@ Purpose     : Declares LCD interface functions
 
 #include "LCD.h"
 
+#if defined(__cplusplus)
+extern "C" {     /* Make sure we have C-declarations in C++ programs */
+#endif
+
 /************************************************************
 *
 *       Defines
@@ -201,6 +205,11 @@ unsigned long SIM_GUI_GetTaskID(void);
 void SIM_GUI_Lock(void);
 void SIM_GUI_Unlock(void);
 void SIM_GUI_InitOS(void);
+
+
+#if defined(__cplusplus)
+}
+#endif 
 
 #endif /* LCD_H */
 

@@ -107,3 +107,5 @@ Samplecode/*/packages/
 *.db-shm
 *.db-wal
 *.opendb
+*.ipch
+*.aps

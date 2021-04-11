@@ -74,6 +74,9 @@ extern volatile GUI_TIMER_TIME OS_TimeMS;
 */
 static void _SYS_Init(void)
 {
+#ifdef WIN32
+    return;
+#endif
     /*---------------------------------------------------------------------------------------------------------*/
     /* Init System Clock                                                                                       */
     /*---------------------------------------------------------------------------------------------------------*/
@@ -244,6 +247,7 @@ void MainTask(void);
 
 void TMR0_IRQHandler(void)
 {
+#ifndef WIN32
     OS_TimeMS++;
 #if GUI_SUPPORT_TOUCH
     if ( OS_TimeMS % 10 == 0 )
@@ -255,6 +259,7 @@ void TMR0_IRQHandler(void)
     }
 #endif
     TIMER_ClearIntFlag(TIMER0);
+#endif
 }
 
 
@@ -287,12 +292,15 @@ int main(void)
     // Init System, IP clock and multi-function I/O
     //
     _SYS_Init();
+
     //
     // Init UART to 115200-8n1 for print message
     //
     UART_Open(UART0, 115200);
 
     g_enable_Touch = 0;
+
+#ifndef WIN32
 
     // Enable Timer0 clock and select Timer0 clock source
     //
@@ -315,9 +323,12 @@ int main(void)
 //    SysTick_Config(SystemCoreClock / 1000);
     printf("\n\nCPU @ %d Hz\n", SystemCoreClock);
 
+#endif
+
 #if GUI_SUPPORT_TOUCH
     GUI_Init();
 
+#ifndef WIN32
     Init_TouchPanel();
 
 #ifdef __USE_SD__
@@ -377,7 +388,7 @@ int main(void)
     SYS_LockReg();
 #endif
 #endif
-
+#endif
     g_enable_Touch = 1;
 
     //

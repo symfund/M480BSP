@@ -143,7 +143,9 @@ void TIMER_Delay(TIMER_T *timer, uint32_t u32Usec)
        And the while loop below return immediately, so put a tiny delay here allowing timer start counting and raise active flag. */
     for(; delay > 0UL; delay--)
     {
+#if !defined (WIN32)
         __NOP();
+#endif
     }
 
     while(timer->CTL & TIMER_CTL_ACTSTS_Msk)

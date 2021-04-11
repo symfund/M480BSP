@@ -195,6 +195,9 @@ void UART_Open(UART_T* uart, uint32_t u32baudrate)
     uint32_t u32ClkTbl[4] = {__HXT, 0ul, __LXT, __HIRC};
     uint32_t u32Baud_Div = 0ul;
 
+#ifdef WIN32
+    return;
+#endif
 
     if(uart==(UART_T*)UART0)
     {

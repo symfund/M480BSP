@@ -85,8 +85,10 @@ void CLK_PowerDown(void)
     /* Disable HIRC auto trim */
     SYS->IRCTCTL &= (~SYS_IRCTCTL_FREQSEL_Msk);
 
+#if !defined (WIN32)
     /* Chip enter Power-down mode after CPU run WFI instruction */
     __WFI();
+#endif
 
     /* Restore HIRC control register */
     SYS->IRCTCTL = u32HIRCTRIMCTL;
@@ -107,8 +109,10 @@ void CLK_Idle(void)
     /* Set chip in idle mode because of WFI command */
     CLK->PWRCTL &= ~CLK_PWRCTL_PDEN_Msk;
 
+#if !defined (WIN32)
     /* Chip enter idle mode after CPU run WFI instruction */
     __WFI();
+#endif
 }
 
 /**

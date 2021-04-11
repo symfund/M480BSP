@@ -58,6 +58,9 @@
     <Filter Include="ThirdParty\emWin\Lib">
       <UniqueIdentifier>{2418b613-25b1-4b8c-b69c-2ce5a4b96455}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty\emWin\Config\Win32">
+      <UniqueIdentifier>{f5171f26-a1b7-4358-ae4a-5321000da83e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\SampleCode\NuMaker-PFM-M487D\emWin_GUIDemo\tslib\M48XTouchPanel.c">
@@ -103,9 +106,6 @@
       <Filter>Library\StdDriver\src</Filter>
     </ClCompile>
     <ClCompile Include="..\Library\StdDriver\src\gpio.c">
-      <Filter>Library\StdDriver\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Library\StdDriver\src\retarget.c">
       <Filter>Library\StdDriver\src</Filter>
     </ClCompile>
     <ClCompile Include="..\Library\StdDriver\src\sdh.c">
@@ -204,6 +204,19 @@
     <ClCompile Include="..\ThirdParty\FatFs\source\ff.c">
       <Filter>ThirdParty\FatFs\source</Filter>
     </ClCompile>
+    <ClCompile Include="..\Library\StdDriver\src\retarget.c">
+      <Filter>Library\StdDriver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\Win32\GUIConf.c">
+      <Filter>ThirdParty\emWin\Config\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\Win32\LCDConf.c">
+      <Filter>ThirdParty\emWin\Config\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\emWin\Config\Win32\SIMConf.c">
+      <Filter>ThirdParty\emWin\Config\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="AppMain.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile.mak" />
@@ -211,10 +224,20 @@
     <None Include="..\Library\Device\Nuvoton\M480\Source\GCC\startup_M480.S">
       <Filter>Library\Device\Nuvoton\M480\Source\GCC</Filter>
     </None>
+    <None Include="NuDemo.def" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\ThirdParty\emWin\Lib\libNUemWin_CM4_GNU.a">
       <Filter>ThirdParty\emWin\Lib</Filter>
     </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ThirdParty\emWin\Config\Win32\GUIConf.h">
+      <Filter>ThirdParty\emWin\Config\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\emWin\Config\Win32\LCDConf.h">
+      <Filter>ThirdParty\emWin\Config\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="NuDemo.h" />
   </ItemGroup>
 </Project>

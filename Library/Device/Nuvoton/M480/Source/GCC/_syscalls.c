@@ -6,6 +6,8 @@
 
 // ----------------------------------------------------------------------------
 
+#if !defined (WIN32)
+
 int errno;
 void *__dso_handle __attribute__ ((weak));
 
@@ -1166,3 +1168,5 @@ char *getcwd (char *buf, size_t size)
 #endif // defined OS_USE_SEMIHOSTING
 
 #endif // __STDC_HOSTED__ == 1
+
+#endif
