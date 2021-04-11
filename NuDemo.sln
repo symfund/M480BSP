@@ -13,33 +13,23 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
-		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		Release|ARM = Release|ARM
-		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D1319589-4462-4F03-A008-37A5A3451602}.Debug|ARM.ActiveCfg = Debug|ARM
 		{D1319589-4462-4F03-A008-37A5A3451602}.Debug|ARM.Build.0 = Debug|ARM
-		{D1319589-4462-4F03-A008-37A5A3451602}.Debug|x64.ActiveCfg = Debug|x64
-		{D1319589-4462-4F03-A008-37A5A3451602}.Debug|x64.Build.0 = Debug|x64
 		{D1319589-4462-4F03-A008-37A5A3451602}.Debug|x86.ActiveCfg = Debug|Win32
 		{D1319589-4462-4F03-A008-37A5A3451602}.Debug|x86.Build.0 = Debug|Win32
 		{D1319589-4462-4F03-A008-37A5A3451602}.Release|ARM.ActiveCfg = Release|ARM
 		{D1319589-4462-4F03-A008-37A5A3451602}.Release|ARM.Build.0 = Release|ARM
-		{D1319589-4462-4F03-A008-37A5A3451602}.Release|x64.ActiveCfg = Release|x64
-		{D1319589-4462-4F03-A008-37A5A3451602}.Release|x64.Build.0 = Release|x64
 		{D1319589-4462-4F03-A008-37A5A3451602}.Release|x86.ActiveCfg = Release|Win32
 		{D1319589-4462-4F03-A008-37A5A3451602}.Release|x86.Build.0 = Release|Win32
 		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Debug|ARM.ActiveCfg = Debug|Win32
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Debug|x64.ActiveCfg = Debug|x64
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Debug|x64.Build.0 = Debug|x64
 		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Debug|x86.ActiveCfg = Debug|Win32
 		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Debug|x86.Build.0 = Debug|Win32
 		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Release|ARM.ActiveCfg = Release|Win32
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Release|x64.ActiveCfg = Release|x64
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Release|x64.Build.0 = Release|x64
 		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Release|x86.ActiveCfg = Release|Win32
 		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
