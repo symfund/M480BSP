@@ -5,11 +5,6 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NuDemo", "NuDemo\NuDemo.vcxproj", "{D1319589-4462-4F03-A008-37A5A3451602}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NuSimDemo", "NuSimDemo\NuSimDemo.vcxproj", "{777A02DB-6503-4867-BF35-693B6A1A0A33}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D1319589-4462-4F03-A008-37A5A3451602} = {D1319589-4462-4F03-A008-37A5A3451602}
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -26,12 +21,6 @@ Global
 		{D1319589-4462-4F03-A008-37A5A3451602}.Release|ARM.Build.0 = Release|ARM
 		{D1319589-4462-4F03-A008-37A5A3451602}.Release|x86.ActiveCfg = Release|Win32
 		{D1319589-4462-4F03-A008-37A5A3451602}.Release|x86.Build.0 = Release|Win32
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Debug|ARM.ActiveCfg = Debug|Win32
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Debug|x86.ActiveCfg = Debug|Win32
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Debug|x86.Build.0 = Debug|Win32
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Release|ARM.ActiveCfg = Release|Win32
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Release|x86.ActiveCfg = Release|Win32
-		{777A02DB-6503-4867-BF35-693B6A1A0A33}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

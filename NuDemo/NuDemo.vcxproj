@@ -71,10 +71,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <NMakeOutput>
     </NMakeOutput>
-    <NMakePreprocessorDefinitions>
-    </NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>
-    </NMakeIncludeSearchPath>
+    <NMakePreprocessorDefinitions>__USE_SD__;GUI_SUPPORT_TOUCH</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>..\Library\StdDriver\inc;</NMakeIncludeSearchPath>
     <NMakeBuildCommandLine>BuildCmd.bat all $(SolutionDir)$(Platform)\$(Configuration)\</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>BuildCmd.bat rebuild $(SolutionDir)$(Platform)\$(Configuration)\</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>BuildCmd.bat clean $(SolutionDir)$(Platform)\$(Configuration)\</NMakeCleanCommandLine>
@@ -100,11 +98,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <NMakeOutput>
     </NMakeOutput>
-    <NMakePreprocessorDefinitions>
-    </NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>__USE_SD__;GUI_SUPPORT_TOUCH</NMakePreprocessorDefinitions>
     <NMakeBuildCommandLine>BuildCmd.bat all $(SolutionDir)$(Platform)\$(Configuration)\</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>BuildCmd.bat rebuild $(SolutionDir)$(Platform)\$(Configuration)\</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>BuildCmd.bat clean $(SolutionDir)$(Platform)\$(Configuration)\</NMakeCleanCommandLine>
+    <NMakeIncludeSearchPath>..\Library\StdDriver\inc;</NMakeIncludeSearchPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
