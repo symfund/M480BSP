@@ -8,3 +8,5 @@ Release/
 *.tlog
 *.pdb
 *.o
+*.exp
+*.ilk
