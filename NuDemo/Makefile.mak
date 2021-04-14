@@ -1,6 +1,5 @@
 
-# TWjiang@nuvoton.com
-
+# Bug report: TWjiang@nuvoton.com
 
 # Make phony targets .PHONY
 # There isn't really an all file created and there really isn't clean file.
@@ -15,12 +14,8 @@ DEFS = -DMACROTEST1 \
 
 INCLUDES = -I. -I"../../Library/CMSIS/Include" -I"../../Library/Device/Nuvoton/M480/Include" -I"../../Library/StdDriver/inc" -I"../../ThirdParty/emWin/Config" -I"../../ThirdParty/emWin/Include" -I"../../ThirdParty/FatFs/source" -I"../../SampleCode/NuMaker-PFM-M487D/emWin_GUIDemo/GCC/../tslib"
 
-# -MMD -MP -MF"Application/GUIDEMO_Start.d" -MT"Application/GUIDEMO_Start.o"
-
-
 GFLAGS = -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char \
 	-ffunction-sections -fdata-sections  -g
-
 
 CFLAGS = -std=gnu11 $(INCLUDES) $(DEFS)
 
