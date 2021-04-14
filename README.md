@@ -2,7 +2,7 @@
 M487D DSP Simulator Demo
 
 # Install Toolchain
-The **GNU Tools ARM Embedded** is encapsulated in **NuEclipse**, it is required to download the NuEclipse_V1.01.017_Windows from the below link:
+The **GNU Tools ARM Embedded** is encapsulated in **NuEclipse**, it is required to download the **NuEclipse_V1.01.017_Windows** from the below link:
 
 http://www.nuvoton.com.cn/resource-download.jsp?tp_GUID=SW1120200401182901
 
