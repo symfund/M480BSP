@@ -2,13 +2,16 @@
 M487D DSP Simulator Demo
 
 # Install Toolchain
-The GNU Tools ARM Embedded is encapsulated in NuEclipse, it is required to download the NuEclipse_V1.01.017_Windows from the below link:
+The **GNU Tools ARM Embedded** is encapsulated in **NuEclipse**, it is required to download the NuEclipse_V1.01.017_Windows from the below link:
+
 http://www.nuvoton.com.cn/resource-download.jsp?tp_GUID=SW1120200401182901
 
-If the above link is broken, go to https://www.nuvoton.com.cn/tool-and-software/ide-and-compiler/
+If the above link is broken, go to 
+
+https://www.nuvoton.com.cn/tool-and-software/ide-and-compiler/
 
 # Setup Toolchain
-Modify M480BSP/NuDemo/BuildCmd.bat, and make sure that both MAKE_PATH and GNU_TOOLS_ARM_EMBEDDED_PATH point to the right path.
+Modify **M480BSP/NuDemo/BuildCmd.bat**, and ensure that both **MAKE_PATH** and **GNU_TOOLS_ARM_EMBEDDED_PATH** point to the right path.
 
 SET MAKE_PATH=path/to/make.exe
 
