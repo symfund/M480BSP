@@ -1,4 +1,4 @@
-# Developing M480 with Visual Studio Community 2019 and GNU Tools ARM Embedded on Windows 10
+# Developing emWin based Application for M480 with Visual Studio Community 2019 and GNU Tools ARM Embedded on Windows 10
 M487D DSP Simulator Demo
 
 # Install Toolchain
