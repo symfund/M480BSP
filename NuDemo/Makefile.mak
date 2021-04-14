@@ -13,14 +13,13 @@
 DEFS = -DMACROTEST1 \
 	-DMACROTEST2
 
-INCLUDES = -I. -I"../../Library/CMSIS/Include" -I"../../Library/Device/Nuvoton/M480/Include" -I"../../Library/StdDriver/inc" -I"../../ThirdParty/emWin/Config" -I"../../ThirdParty/emWin/Include" -I"../../ThirdParty/FatFs/source" -I"D:/Projects/M480BSP/SampleCode/NuMaker-PFM-M487D/emWin_GUIDemo/GCC/../tslib"
+INCLUDES = -I. -I"../../Library/CMSIS/Include" -I"../../Library/Device/Nuvoton/M480/Include" -I"../../Library/StdDriver/inc" -I"../../ThirdParty/emWin/Config" -I"../../ThirdParty/emWin/Include" -I"../../ThirdParty/FatFs/source" -I"../../SampleCode/NuMaker-PFM-M487D/emWin_GUIDemo/GCC/../tslib"
 
 # -MMD -MP -MF"Application/GUIDEMO_Start.d" -MT"Application/GUIDEMO_Start.o"
 
+
 GFLAGS = -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char \
 	-ffunction-sections -fdata-sections  -g
-	
-# -std=gnu11 -MMD -MP -MF"Application/GUIDEMO_ZoomAndRotate.d" -MT"Application/GUIDEMO_ZoomAndRotate.o" -c -o "Application/GUIDEMO_ZoomAndRotate.o" "D:/Projects/M480BSP/SampleCode/NuMaker-PFM-M487D/emWin_GUIDemo/Application/GUIDEMO_ZoomAndRotate.c"
 
 
 CFLAGS = -std=gnu11 $(INCLUDES) $(DEFS)
@@ -108,6 +107,7 @@ SRCS_S = ../../Library/Device/Nuvoton/M480/Source/GCC/startup_M480.S
 # with the .o suffix
 OBJS = $(SRCS_C:.c=.o) $(SRCS_S:.S=.o)
 
+C_DEPS = $(OBJS:.o=.d)
   
 # Linking
 MAIN = emWin_GUIDemo.elf
@@ -144,11 +144,8 @@ target: $(MAIN)
 
 # Define an implicit rule other than above
 # The following means to build the target foo.S make should build foo.c
-%.S: %.c
-	$(CC) -S $@ -c $<
-
-%.o: %.S
-	$(CC) -o $@ -c $<
+.S.o:
+	$(CC) $(GFLAGS) -x assembler-with-cpp $(INCLUDES) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 
 
 all: target
