@@ -1,7 +1,7 @@
 
 REM make tool path
-rem set make_provided_by=C:\Program Files (x86)\GNU ARM Eclipse\Build Tools\2.8-201611221915\bin
-set make_provided_by=C:\msys64\usr\bin
+set make_provided_by=C:\Program Files (x86)\GNU ARM Eclipse\Build Tools\2.8-201611221915\bin
+REM set make_provided_by=C:\msys64\usr\bin
 set MAKE_PATH=%make_provided_by%
 
 REM gcc tool path
