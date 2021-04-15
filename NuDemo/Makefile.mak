@@ -9,13 +9,31 @@
 
 
 # The Preprocessor Macros
-DEFS = -DMACROTEST1 \
-	-DMACROTEST2
+DEFS = \
+	-DMACROTEST1 \
+	-DMACROTEST2 \
 
-INCLUDES = -I. -I"../../Library/CMSIS/Include" -I"../../Library/Device/Nuvoton/M480/Include" -I"../../Library/StdDriver/inc" -I"../../ThirdParty/emWin/Config" -I"../../ThirdParty/emWin/Include" -I"../../ThirdParty/FatFs/source" -I"../../SampleCode/NuMaker-PFM-M487D/emWin_GUIDemo/GCC/../tslib"
+INCLUDES = \
+	-I. \
+	-I"../../Library/CMSIS/Include" \
+	-I"../../Library/Device/Nuvoton/M480/Include" \
+	-I"../../Library/StdDriver/inc" \
+	-I"../../ThirdParty/emWin/Config" \
+	-I"../../ThirdParty/emWin/Include" \
+	-I"../../ThirdParty/FatFs/source" \
+	-I"../../SampleCode/NuMaker-PFM-M487D/emWin_GUIDemo/GCC/../tslib" \
 
-GFLAGS = -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char \
-	-ffunction-sections -fdata-sections  -g
+GFLAGS = \
+	-mcpu=cortex-m4 \
+	-mthumb \
+	-mfloat-abi=hard \
+	-mfpu=fpv4-sp-d16 \
+	-O2 \
+	-fmessage-length=0 \
+	-fsigned-char \
+	-ffunction-sections \
+	-fdata-sections \
+	-g \
 
 CFLAGS = -std=gnu11 $(INCLUDES) $(DEFS)
 
@@ -123,7 +141,6 @@ target: $(MAIN)
 	@echo
 	@echo Invoking: GNU ARM Cross Print Size
 	$(SIZE) --format=berkeley $<
-	@echo Finished building: emWin_GUIDemo.siz
 	@echo
 
 
