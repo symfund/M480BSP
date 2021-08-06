@@ -22,7 +22,9 @@ SET GNU_TOOLS_ARM_EMBEDDED_PATH=path/to/arm-none-gcc.exe
 
 # Arbitray LCD dimension support
 Support arbitray LCD dimension. To change LCD resolution on PC simulator, alter **ThirdParty\emWin\Config\Win32\LCDConf.c**
+
 **#define XSIZE_PHYS 375**
+
 **#define YSIZE_PHYS 640**
 
 ![portrait mode](/NuDemo/res/portrait.png)
