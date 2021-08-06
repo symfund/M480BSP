@@ -11,8 +11,6 @@
 
 #define DEBUG_PORT   UART0
 
-#define PLL_CLOCK       192000000
-
 uint32_t slave_buff_addr;
 uint8_t g_au8SlvData[256];
 uint8_t g_au8SlvRxData[3];
@@ -181,8 +179,8 @@ void SYS_Init(void)
     SYS->GPA_MFPL = (SYS->GPA_MFPL & ~(SYS_GPA_MFPL_PA4MFP_Msk | SYS_GPA_MFPL_PA5MFP_Msk)) |
                     (SYS_GPA_MFPL_PA4MFP_I2C0_SDA | SYS_GPA_MFPL_PA5MFP_I2C0_SCL);
 
-    /* I2C clock pin enable schmitt trigger */
-    PA->SMTEN |= GPIO_SMTEN_SMTEN5_Msk;
+    /* I2C pin enable schmitt trigger */
+    PA->SMTEN |= GPIO_SMTEN_SMTEN4_Msk | GPIO_SMTEN_SMTEN5_Msk;
 }
 
 void I2C0_Init(void)
