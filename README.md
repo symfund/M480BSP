@@ -20,8 +20,12 @@ SET GNU_TOOLS_ARM_EMBEDDED_PATH=path/to/arm-none-gcc.exe
 # Using Nuvoton Simulator
 ![Nuvoton Simulator Animation](/NuDemo/res/anim.gif)
 
+# Arbitray LCD dimension support
+Support arbitray LCD dimension. To change LCD resolution on PC simulator, alter **ThirdParty\emWin\Config\Win32\LCDConf.c**
+**#define XSIZE_PHYS 375**
+**#define YSIZE_PHYS 640**
 
-
+![portrait mode](/NuDemo/res/portrait.png)
 
 Open **NuDemo.sln** with **Microsoft Visual Studio Community 2019**, choose the configuration **Debug** and **x86** , then click the button **Local Windows Debugger** to lanuch simulator.
 
