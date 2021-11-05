@@ -1,3 +1,9 @@
+
+
+**WARNING: I do not have a M48x board to test this code, using this repository is at your own risk!**
+
+
+
 # Developing emWin based Application for M487D with Visual Studio Community 2019 and GNU Tools ARM Embedded on Windows 10
 M487D DSP Simulator Demo
 
