@@ -25,7 +25,6 @@ int32_t SDH_Open_Disk(SDH_T *sdh, uint32_t u32CardDetSrc)
     SDH_Open(sdh, u32CardDetSrc);
     if (SDH_Probe(sdh))
     {
-        printf("SD initial fail!!\n");
         return Fail;
     }
 
@@ -41,9 +40,7 @@ int32_t SDH_Open_Disk(SDH_T *sdh, uint32_t u32CardDetSrc)
         _Path[0] = '1';
         f_mount(&_FatfsVolSd1, _Path, 1);
     }
-
-	return Successful;
-
+    return Successful;
 }
 
 void SDH_Close_Disk(SDH_T *sdh)

@@ -17,6 +17,8 @@
   @{
 */
 
+int32_t g_CLK_i32ErrCode = 0;    /*!< CLK global error code */
+
 /** @addtogroup CLK_EXPORTED_FUNCTIONS CLK Exported Functions
   @{
 */
@@ -85,10 +87,8 @@ void CLK_PowerDown(void)
     /* Disable HIRC auto trim */
     SYS->IRCTCTL &= (~SYS_IRCTCTL_FREQSEL_Msk);
 
-#if !defined (WIN32)
     /* Chip enter Power-down mode after CPU run WFI instruction */
     __WFI();
-#endif
 
     /* Restore HIRC control register */
     SYS->IRCTCTL = u32HIRCTRIMCTL;
@@ -109,10 +109,8 @@ void CLK_Idle(void)
     /* Set chip in idle mode because of WFI command */
     CLK->PWRCTL &= ~CLK_PWRCTL_PDEN_Msk;
 
-#if !defined (WIN32)
     /* Chip enter idle mode after CPU run WFI instruction */
     __WFI();
-#endif
 }
 
 /**
@@ -960,21 +958,27 @@ void CLK_DisablePLL(void)
   *             - \ref CLK_STATUS_PLLSTB_Msk
   * @retval     0  clock is not stable
   * @retval     1  clock is stable
-  * @details    To wait for clock ready by specified clock source stable flag or timeout (~300ms)
+  * @details    To wait for clock ready by specified clock source stable flag or timeout (~500ms)
+  * @note       This function sets g_CLK_i32ErrCode to CLK_TIMEOUT_ERR if clock source status is not stable
   */
 uint32_t CLK_WaitClockReady(uint32_t u32ClkMask)
 {
-    int32_t i32TimeOutCnt = 2160000;
+    uint32_t u32TimeOutCnt = SystemCoreClock / 2;
     uint32_t u32Ret = 1U;
 
+    g_CLK_i32ErrCode = 0;
     while((CLK->STATUS & u32ClkMask) != u32ClkMask)
     {
-        if(i32TimeOutCnt-- <= 0)
+        if(--u32TimeOutCnt == 0)
         {
             u32Ret = 0U;
             break;
         }
     }
+
+    if(u32TimeOutCnt == 0)
+        g_CLK_i32ErrCode = CLK_TIMEOUT_ERR;
+
     return u32Ret;
 }
 
@@ -1106,10 +1110,11 @@ void CLK_EnableDPDWKPin(uint32_t u32TriggerType)
 
     if ((SYS->CSERVER & SYS_CSERVER_VERSION_Msk) == 0x1) // M480LD
     {
-        u32Pin1 = (((u32TriggerType) & 0x03UL) >> CLK_PMUCTL_WKPINEN1_Pos);
-        u32Pin2 = (((u32TriggerType) & 0x03UL) >> CLK_PMUCTL_WKPINEN2_Pos);
-        u32Pin3 = (((u32TriggerType) & 0x03UL) >> CLK_PMUCTL_WKPINEN3_Pos);
-        u32Pin4 = (((u32TriggerType) & 0x03UL) >> CLK_PMUCTL_WKPINEN4_Pos);
+
+        u32Pin1 = ((u32TriggerType) & CLK_PMUCTL_WKPINEN1_Msk);
+        u32Pin2 = ((u32TriggerType) & CLK_PMUCTL_WKPINEN2_Msk);
+        u32Pin3 = ((u32TriggerType) & CLK_PMUCTL_WKPINEN3_Msk);
+        u32Pin4 = ((u32TriggerType) & CLK_PMUCTL_WKPINEN4_Msk);
 
         if(u32Pin1)
         {
