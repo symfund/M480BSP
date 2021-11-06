@@ -88,7 +88,9 @@ void CLK_PowerDown(void)
     SYS->IRCTCTL &= (~SYS_IRCTCTL_FREQSEL_Msk);
 
     /* Chip enter Power-down mode after CPU run WFI instruction */
+#ifndef WIN32
     __WFI();
+#endif
 
     /* Restore HIRC control register */
     SYS->IRCTCTL = u32HIRCTRIMCTL;
@@ -110,7 +112,9 @@ void CLK_Idle(void)
     CLK->PWRCTL &= ~CLK_PWRCTL_PDEN_Msk;
 
     /* Chip enter idle mode after CPU run WFI instruction */
+#ifndef WIN32
     __WFI();
+#endif
 }
 
 /**

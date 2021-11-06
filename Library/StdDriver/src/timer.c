@@ -146,7 +146,9 @@ int32_t TIMER_Delay(TIMER_T *timer, uint32_t u32Usec)
        delay larger than 1 ECLK here allowing timer start counting and raise active flag. */
     for(u32Delay = (SystemCoreClock / u32Clk) + 1UL; u32Delay > 0UL; u32Delay--)
     {
+    #ifndef WIN32
         __NOP();
+	#endif
     }
 
     /* Add a bail out counter here in case timer clock source is disabled accidentally.
@@ -386,7 +388,9 @@ int32_t TIMER_ResetCounter(TIMER_T *timer)
     u32Delay = (SystemCoreClock / TIMER_GetModuleClock(timer)) * 3;
     while(((timer->CNT&TIMER_CNT_RSTACT_Msk) == TIMER_CNT_RSTACT_Msk) && (--u32Delay))
     {
+    #ifndef WIN32
         __NOP();
+	#endif
     }
     return u32Delay > 0 ? 0 : TIMER_TIMEOUT_ERR;
 }
